@@ -2,8 +2,19 @@
 
 namespace App\Controllers;
 
+use App\DB;
+use App\Models\User;
+
+
 class PublicController {
     public function home(){
+        $db = new DB;
+        $result = User::all();
+        var_dump($result);
+    
+
+
+        die();
         $name = 'Martin';
         $num = 10;
         view('home', compact('name', 'num'));

@@ -7,7 +7,7 @@ class Router {
     public $method;
 
     public function __construct($path, $method) {
-        var_dump($path);
+
         $this->path = parse_url($path, PHP_URL_PATH);
         $this->method = $method;
     }
