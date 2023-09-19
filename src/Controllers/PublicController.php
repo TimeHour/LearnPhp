@@ -1,33 +1,32 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
-use App\DB;
-use App\Models\User;
+use App\Models\Article;
 
 
-class PublicController {
-    public function home(){
-        $db = new DB;
-        $result = User::all();
-        var_dump($result);
-    
+
+class PublicController
+{
+    public function home()
+    {
+        $articles = Article::all();
 
 
-        die();
-        $name = 'Martin';
-        $num = 10;
-        view('home', compact('name', 'num'));
+        view('home', compact('articles'));
     }
-    public function about(){
+    public function about()
+    {
         view('about');
     }
-    public function test(){
+    public function test()
+    {
         var_dump($_POST);
         var_dump($_SERVER);
         view("form");
     }
-    public function testAnswer(){
+    public function testAnswer()
+    {
         var_dump($_POST);
     }
 }
