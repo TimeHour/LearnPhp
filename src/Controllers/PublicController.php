@@ -19,11 +19,12 @@ class PublicController
     {
         view('about');
     }
-    public function test()
-    {
-        var_dump($_POST);
-        var_dump($_SERVER);
-        view("form");
+    public function test(){
+        session_start();
+        // setcookie('Mycookie', 'tasty', time() + 60*60*24*30, '','',false, true);
+        // var_dump($_COOKIE);
+        var_dump($_SESSION);
+        // $_SESSION['id'] = 123;
     }
     public function testAnswer()
     {

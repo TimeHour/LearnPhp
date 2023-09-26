@@ -33,6 +33,14 @@ class DB
     return $stmt->fetchAll();
   }
 
+  public function where($table, $class, $field, $value){
+    $stmt = $this->conn->prepare("SELECT * FROM $table WHERE $field='$value'");
+    $stmt->execute();
+
+    $stmt->setFetchMode(PDO::FETCH_CLASS, $class);
+    return $stmt->fetchAll();
+  }
+
   public function find($table, $class, $id)
   {
     $stmt = $this->conn->prepare("SELECT * FROM $table WHERE id=$id");

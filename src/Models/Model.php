@@ -11,6 +11,11 @@ class Model {
     	$db = new DB();
         return $db->all(static::$table, static::class);
     }
+
+    public static function where($fields, $value){
+    	$db = new DB();
+        return $db->where(static::$table, static::class, $fields, $value);
+    }
     
     public static function find($id){
     	$db = new DB();
