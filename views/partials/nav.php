@@ -18,6 +18,9 @@
                         <a class="navbar-item" href="/admin/articles">
                                 Admin
                         </a>
+                        <a class="navbar-item" href="/admin/user">
+                                Users
+                        </a>
                 </div>
                 <div class="navbar-end">
                         <div class="navbar-item">
@@ -26,7 +29,6 @@
         <a class="navbar-link">
           <?=auth()->email?>
         </a>
-
         <div class="navbar-dropdown">
           <a class="navbar-item" href="/logout">
             Logout

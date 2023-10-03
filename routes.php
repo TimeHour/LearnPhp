@@ -4,6 +4,7 @@ use App\Controllers\ArticlesController;
 use App\Controllers\AuthController;
 use App\Router;
 use App\Controllers\PublicController;
+use App\Controllers\UserController;
 
 Router::get('/', [PublicController::class, 'home']);
 Router::get('/about', [PublicController::class, 'about']);
@@ -24,6 +25,11 @@ Router::get('/register', [AuthController::class, 'registerForm']);
 Router::post('/login', [AuthController::class, 'login']);
 Router::get('/login', [AuthController::class, 'loginForm']);
 Router::get('/logout', [AuthController::class, 'logout']);
+
+Router::get('/admin/user', [UserController::class, 'index']);
+Router::get('/admin/user/view', [UserController::class, 'view']);
+Router::get('/admin/user/delete', [UserController::class, 'delete']);
+
 
 
 

@@ -43,4 +43,8 @@ class AuthController {
         unset($_SESSION['user']);
         header('Location: /');
     }
+
+    public function account(){
+        view('articles/account');
+    }
 }
