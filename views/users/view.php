@@ -2,7 +2,7 @@
 <div class="container">
 
     <div class="buttons has-addons">
-        <a class="button is-info" href="/admin/articles">Back</a>
+        <a class="button is-info" href="/admin/users">Back</a>
     </div>
     <table class="table is-striped is-fullwidth">
         <tbody>

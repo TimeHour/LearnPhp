@@ -26,9 +26,9 @@ Router::post('/login', [AuthController::class, 'login']);
 Router::get('/login', [AuthController::class, 'loginForm']);
 Router::get('/logout', [AuthController::class, 'logout']);
 
-Router::get('/admin/user', [UserController::class, 'index']);
-Router::get('/admin/user/view', [UserController::class, 'view']);
-Router::get('/admin/user/delete', [UserController::class, 'delete']);
+Router::get('/admin/users', [UserController::class, 'index']);
+Router::get('/admin/users/view', [UserController::class, 'show']);
+Router::get('/admin/users/delete', [UserController::class, 'delete']);
 
 
 

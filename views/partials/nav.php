@@ -18,7 +18,7 @@
                         <a class="navbar-item" href="/admin/articles">
                                 Admin
                         </a>
-                        <a class="navbar-item" href="/admin/user">
+                        <a class="navbar-item" href="/admin/users">
                                 Users
                         </a>
                 </div>
